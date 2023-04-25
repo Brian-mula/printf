@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 /**
  * print_char - Prints a char
  * @types: List a of arguments
@@ -8,6 +9,18 @@
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of chars printed
+=======
+
+/*
+ * print_char - func char
+ * @types: args
+ * @buffer: buffer
+ * @flags:  flags
+ * @width: Width
+ * @precision: precise
+ * @size: size
+ * Return: return value
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
  */
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -16,6 +29,7 @@ int print_char(va_list types, char buffer[],
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
+<<<<<<< HEAD
 
 /**
  * print_string - Prints a string
@@ -28,6 +42,18 @@ int print_char(va_list types, char buffer[],
  * Return: Number of chars printed
  */
 
+=======
+/*
+ * print_string - func string
+ * @types: type
+ * @buffer: buffer
+ * @flags: flags
+ * @width: width
+ * @precision: precise
+ * @size: size
+ * Return: return value
+ */
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
 int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -72,6 +98,7 @@ int print_string(va_list types, char buffer[],
 
 	return (write(1, str, length));
 }
+<<<<<<< HEAD
 /**
  * print_percent - Prints a percent sign
 * @types: Lista of arguments
@@ -81,6 +108,17 @@ int print_string(va_list types, char buffer[],
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of chars printed
+=======
+/*
+ * print_percent - func percent
+* @types: args
+ * @buffer: buffer find
+ * @flags: find flags
+ * @width: find width
+ * @precision: Precision
+ * @size: Size specifier
+ * Return: return value
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
  */
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -93,6 +131,7 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(size);
 	return (write(1, "%%", 1));
 }
+<<<<<<< HEAD
 /**
  * print_int - Print int
  * @types: Lista of arguments
@@ -102,6 +141,18 @@ int print_percent(va_list types, char buffer[],
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of chars printed
+=======
+
+/*
+ * print_int - func int
+ * @types: args
+ * @buffer: arr buffer
+ * @flags: flags to find
+ * @width: finding width
+ * @precision: find precision
+ * @size: specify size
+ * Return: return value
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
  */
 int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -118,7 +169,12 @@ int print_int(va_list types, char buffer[],
 
 	buffer[BUFF_SIZE - 1] = '\0';
 	num = (unsigned long int)n;
+<<<<<<< HEAD
 if (n < 0)
+=======
+
+	if (n < 0)
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
 	{
 		num = (unsigned long int)((-1) * n);
 		is_negative = 1;
@@ -134,6 +190,7 @@ if (n < 0)
 
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
+<<<<<<< HEAD
 /**
  * print_binary - Prints an unsigned number
  * @types: Lista of arguments
@@ -143,6 +200,18 @@ if (n < 0)
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Numbers of char printed.
+=======
+
+/*
+ * print_binary - unsigned number
+ * @types: args
+ * @buffer: buffer arr
+ * @flags: flags to find out
+ * @width: get width.
+ * @precision: specifying preciseness
+ * @size: Size specifier
+ * Return: return value
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
  */
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -162,7 +231,12 @@ int print_binary(va_list types, char buffer[],
 	a[0] = n / m;
 	for (i = 1; i < 32; i++)
 	{
+<<<<<<< HEAD
 m /= 2;
+=======
+
+		m /= 2;
+>>>>>>> 2104d74bdb43e3c73c0be63f95f231c3faade2bd
 		a[i] = (n / m) % 2;
 	}
 	for (i = 0, sum = 0, count = 0; i < 32; i++)

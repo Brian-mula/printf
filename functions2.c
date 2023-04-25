@@ -77,9 +77,10 @@ int print_non_printable(va_list types, char buffer[],
 		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
 	else
-			offset += append_hexa_code(str[i], buffer, i + offset);
-
-		i++;
+	{
+	offset += append_hexa_code(str[i], buffer, i + offset);
+	i++;
+	}
 	}
 
 	buffer[i + offset] = '\0';
@@ -127,6 +128,8 @@ int print_reverse(va_list types, char buffer[],
 		count++;
 	}
 	return (count);
+	}
+
 /**
  * print_rot13string - Print a string in rot13.
  * @types: Lista of arguments
@@ -165,7 +168,7 @@ int print_rot13string(va_list types, char buffer[],
 				x = out[j];
 				write(1, &x, 1);
 				count++;
-			break;
+				break;
 			}
 		}
 		if (!in[j])
@@ -177,4 +180,5 @@ int print_rot13string(va_list types, char buffer[],
 	}
 	return (count);
 }
+
 
